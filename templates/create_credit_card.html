@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Create Credit Card - Secure Flask App{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Create Credit Card</h1>
+<form method="POST">
+    <div class="mb-3">
+        <label for="card_number" class="form-label">Card Number</label>
+        <input type="text" class="form-control" id="card_number" name="card_number" required pattern="\d{16}" title="Please enter a 16-digit card number">
+    </div>
+    <button type="submit" class="btn btn-primary">Create Credit Card</button>
+</form>
+<p class="mt-3"><a href="{{ url_for('home') }}">Back to Home</a></p>
+{% endblock %}
